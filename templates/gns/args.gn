@@ -3,3 +3,12 @@
 
 target_os="-target_os-"
 target_cpu="-target_cpu-"
+is_debug=-is_debug- 
+#rtc_use_h264 = true
+#ffmpeg_branding = "Chrome"
+#use_openh264 = true
+rtc_include_tests = false
+libyuv_include_tests = false
+build_libsrtp_tests = false
+#rtc_initialize_ffmpeg = true
+is_official_build=-is_official_build-
