@@ -198,7 +198,7 @@
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
       <WindowsMetadataFile>$(OutDir)Org.WebRtc.winmd</WindowsMetadataFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\WEBRTC_BUILD\webrtc\$(Configuration)\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\dist\winrt_10_$(PlatformTarget)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
@@ -246,7 +246,7 @@
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
       <WindowsMetadataFile>$(OutDir)Org.WebRtc.winmd</WindowsMetadataFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\WEBRTC_BUILD\webrtc\$(Configuration)\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\dist\winrt_10_$(PlatformTarget)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
@@ -287,7 +287,7 @@
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <SubSystem>Console</SubSystem>
       <WindowsMetadataFile>$(OutDir)Org.WebRtc.winmd</WindowsMetadataFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\WEBRTC_BUILD\webrtc\$(Configuration)\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\dist\winrt_10_$(PlatformTarget)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
@@ -335,7 +335,7 @@
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <SubSystem>Console</SubSystem>
       <WindowsMetadataFile>$(OutDir)Org.WebRtc.winmd</WindowsMetadataFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\WEBRTC_BUILD\webrtc\$(Configuration)\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\dist\winrt_10_$(PlatformTarget)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
@@ -381,7 +381,7 @@
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX64</TargetMachine>
       <WindowsMetadataFile>$(OutDir)Org.WebRtc.winmd</WindowsMetadataFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\WEBRTC_BUILD\webrtc\$(Configuration)\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\dist\winrt_10_$(PlatformTarget)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
@@ -431,7 +431,7 @@
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX64</TargetMachine>
       <WindowsMetadataFile>$(OutDir)Org.WebRtc.winmd</WindowsMetadataFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\WEBRTC_BUILD\webrtc\$(Configuration)\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\..\xplatform\webrtc\dist\winrt_10_$(PlatformTarget)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>

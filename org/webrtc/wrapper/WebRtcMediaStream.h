@@ -56,8 +56,8 @@ namespace Org {
 				// IMFGetService
 				IFACEMETHOD(GetService)(REFGUID guidService, REFIID riid, LPVOID *ppvObject);
 
-				// rtc::VideoSinkInterface<cricket::VideoFrame>
-				virtual void RenderFrame(const cricket::VideoFrame *frame);
+				// rtc::VideoSinkInterface<webrtc::VideoFrame>
+				virtual void RenderFrame(const webrtc::VideoFrame *frame);
 
 				STDMETHOD(Start)(IMFPresentationDescriptor *pPresentationDescriptor,
 					const GUID *pguidTimeFormat, const PROPVARIANT *pvarStartPosition);

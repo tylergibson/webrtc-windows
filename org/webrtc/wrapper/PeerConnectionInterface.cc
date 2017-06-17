@@ -680,12 +680,14 @@ namespace Org {
 				rtc::EnsureWinsockInit();
 				rtc::InitializeSSL(globals::certificateVerifyCallBack);
 
-				auto encoderFactory = new webrtc::H264WinRTEncoderFactory();
-				auto decoderFactory = new webrtc::H264WinRTDecoderFactory();
+				cricket::WebRtcVideoEncoderFactory* encoderFactory = new webrtc::H264WinRTEncoderFactory();
+				cricket::WebRtcVideoDecoderFactory* decoderFactory = new webrtc::H264WinRTDecoderFactory();
 
 				LOG(LS_INFO) << "Creating PeerConnectionFactory.";
 				globals::gPeerConnectionFactory =
-					webrtc::CreatePeerConnectionFactory(encoderFactory, decoderFactory);
+					webrtc::CreatePeerConnectionFactory(
+						encoderFactory, 
+						decoderFactory);
 
 				webrtc::SetupEventTracer(&WebRTC::GetCategoryGroupEnabled,
 					&WebRTC::AddTraceEvent);

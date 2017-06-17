@@ -14,7 +14,7 @@
 #include "webrtc/media/base/videosourceinterface.h"
 #include "libyuv/convert.h"
 #include "webrtc/system_wrappers/include/critical_section_wrapper.h"
-#include "webrtc/base/timing.h"
+#include "webrtc/base/timeutils.h"
 
 using Microsoft::WRL::ComPtr;
 using Platform::Collections::Vector;
@@ -117,7 +117,7 @@ namespace Org {
 				if (_isFirstFrame) {
 					_isFirstFrame = false;
 					Org::WebRtc::FirstFrameRenderHelper::FireEvent(
-						rtc::Timing::WallTimeNow() * rtc::kNumMillisecsPerSec);
+						rtc::TimeUTCMicros() / static_cast<double>(rtc::kNumMicrosecsPerMillisec));
 					LONGLONG frameTime = GetNextSampleTimeHns(data->renderTime, _frameType == FrameTypeH264);
 					data->sample->SetSampleTime(frameTime);
 				} else {
@@ -163,7 +163,7 @@ namespace Org {
 					if (tmp != nullptr) {
 						tmp->AddRef();
 						data->sample.Attach(tmp);
-						data->renderTime = frame->GetTimeStamp();
+						data->renderTime = frame->timestamp_us();
 
 						ComPtr<IMFAttributes> sampleAttributes;
 						data->sample.As(&sampleAttributes);

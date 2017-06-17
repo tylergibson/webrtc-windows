@@ -13,7 +13,7 @@
 #include "webrtc_stats_observer.h"
 #include "webrtc_stats_network_sender.h"
 #include "webrtc/base/thread.h"
-#include "webrtc/base/timing.h"
+#include "webrtc/base/timeutils.h"
 #include "../wrapper/RTCStatsReport.h"
 #include "../wrapper/Marshalling.h"
 

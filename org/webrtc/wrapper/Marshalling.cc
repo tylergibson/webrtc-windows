@@ -381,8 +381,6 @@ namespace Org {
 																																																																																																															webrtc::StatsReport::kStatsValueNameTransportType },
 																																																																																																															{ RTCStatsValueName::StatsValueNameTypingNoiseState,
 																																																																																																																webrtc::StatsReport::kStatsValueNameTypingNoiseState },
-																																																																																																																{ RTCStatsValueName::StatsValueNameViewLimitedResolution,
-																																																																																																																	webrtc::StatsReport::kStatsValueNameViewLimitedResolution },
 																																																																																																																	{ RTCStatsValueName::StatsValueNameWritable,
 																																																																																																																		webrtc::StatsReport::kStatsValueNameWritable },
 																																																																																																																		{ RTCStatsValueName::StatsValueNameCurrentEndToEndDelayMs,

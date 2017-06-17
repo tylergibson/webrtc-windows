@@ -21,6 +21,7 @@
 #include "webrtc/base/logging.h"
 #include "webrtc/media/base/videosourceinterface.h"
 #include "webrtc/pc/channelmanager.h"
+#include "webrtc/media/base/videoframe.h"
 #include "webrtc/media/base/mediaengine.h"
 #include "webrtc/api/test/fakeconstraints.h"
 #include "webrtc/modules/audio_device/audio_device_config.h"
@@ -560,7 +561,7 @@ namespace Org {
 						}
 						if (videoCaptureDevice != nullptr) {
 							videoCapturer = _dev_manager->CreateVideoCapturer(
-								*videoCaptureDevice);
+								*videoCaptureDevice).release();
 						}
 
 						char videoLabel[32];
@@ -790,8 +791,8 @@ namespace Org {
 			// Note  For Windows Phone Store apps, music and media apps should clean up
 			// the MediaCapture object and associated resources in the Suspending event
 			// handler and recreate them in the Resuming event handler.
-			webrtc::videocapturemodule::MediaCaptureDevicesWinRT::Instance()->
-				ClearCaptureDevicesCache();
+			//webrtc::videocapturemodule::MediaCaptureDevicesWinRT::Instance()->
+			//	ClearCaptureDevicesCache();
 		}
 
 		void Media::SetDisplayOrientation(
@@ -917,8 +918,8 @@ namespace Org {
 				// Need to remove the cached MediaCapture intance if device removed,
 				// otherwise, DeviceWatchers stops working properly
 				// (event handlers are not called each time)
-				webrtc::videocapturemodule::MediaCaptureDevicesWinRT::Instance()->
-					RemoveMediaCapture(updateInfo->Id);
+				//webrtc::videocapturemodule::MediaCaptureDevicesWinRT::Instance()->
+				//	RemoveMediaCapture(updateInfo->Id);
 				_videoCaptureDeviceChanged = true;
 				OnMediaDevicesChanged(MediaDeviceType::MediaDeviceType_VideoCapture);
 			}
