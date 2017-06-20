@@ -76,7 +76,7 @@ namespace Org {
 
 				static HRESULT CreateMediaType(unsigned int width, unsigned int height,
 					unsigned int rotation, bool isH264, IMFMediaType** ppType);
-				HRESULT MakeSampleCallback(const cricket::VideoFrame* frame, IMFSample** sample);
+				HRESULT MakeSampleCallback(const webrtc::VideoFrame* frame, IMFSample** sample);
 				void FpsCallback(int fps);
 
 				HRESULT ReplyToSampleRequest();

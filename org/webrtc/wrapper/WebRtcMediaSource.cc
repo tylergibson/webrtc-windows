@@ -28,7 +28,7 @@ namespace Org {
 				_frameType(frameType) {
 			}
 
-			void WebRtcMediaSource::WebRtcVideoSink::OnFrame(const cricket::VideoFrame& frame) {
+			void WebRtcMediaSource::WebRtcVideoSink::OnFrame(const webrtc::VideoFrame& frame) {
 				if (frame.video_frame_buffer()->native_handle() == nullptr) {
 					if (_frameType == FrameTypeH264) {
 						_videoSinkObserver->OnVideoFormatChanged(FrameTypeI420);

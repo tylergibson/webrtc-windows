@@ -95,8 +95,8 @@ namespace Org {
 			/// </summary>
 			virtual void Stop();
 		internal:
-			void SetRenderer(rtc::VideoSinkInterface<cricket::VideoFrame>* renderer);
-			void UnsetRenderer(rtc::VideoSinkInterface<cricket::VideoFrame>* renderer);
+			void SetRenderer(rtc::VideoSinkInterface<webrtc::VideoFrame>* renderer);
+			void UnsetRenderer(rtc::VideoSinkInterface<webrtc::VideoFrame>* renderer);
 		private:
 			rtc::scoped_refptr<webrtc::VideoTrackInterface> _impl;
 		};
@@ -408,11 +408,11 @@ namespace Org {
 		/// <summary>
 		/// Raw video stream used as a sink for raw frames in webrtc engine.
 		/// </summary>
-		class RawVideoStream : public rtc::VideoSinkInterface<cricket::VideoFrame> {
+		class RawVideoStream : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
 			public:
 				RawVideoStream(RawVideoSource^ videoSource);
-				virtual void RenderFrame(const cricket::VideoFrame* frame);
-				void OnFrame(const cricket::VideoFrame& frame) override {
+				virtual void RenderFrame(const webrtc::VideoFrame* frame);
+				void OnFrame(const webrtc::VideoFrame& frame) override {
 					RenderFrame(&frame);
 				}
 			private:
@@ -445,11 +445,11 @@ namespace Org {
 		/// <summary>
 		/// Encoded video stream used as a sink for encoded frames in webrtc engine.
 		/// </summary>
-		class EncodedVideoStream : public rtc::VideoSinkInterface<cricket::VideoFrame> {
+		class EncodedVideoStream : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
 		public:
 			EncodedVideoStream(EncodedVideoSource^ videoSource);
-			virtual void RenderFrame(const cricket::VideoFrame* frame);
-			void OnFrame(const cricket::VideoFrame& frame) override {
+			virtual void RenderFrame(const webrtc::VideoFrame* frame);
+			void OnFrame(const webrtc::VideoFrame& frame) override {
 				RenderFrame(&frame);
 			}
 		private:
