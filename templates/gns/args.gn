@@ -3,7 +3,7 @@
 
 target_os="-target_os-"
 target_cpu="-target_cpu-"
-is_debug=true
+is_debug=-is_debug-
 # libyuv_include_tests=false
 # build_libsrtp_tests=false
 # rtc_include_tests=false
